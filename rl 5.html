@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RL Boost Store</title>
+
+<style>
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+margin:0;
+}
+
+header{
+padding:80px 20px;
+background:linear-gradient(135deg,#1e293b,#020617);
+}
+
+h1{
+font-size:48px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+p{
+font-size:18px;
+color:#cbd5f5;
+}
+
+button{
+background:#22c55e;
+border:none;
+padding:15px 35px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+.section{
+margin-top:60px;
+padding:40px 20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+margin:15px;
+display:inline-block;
+border-radius:12px;
+width:220px;
+transition:0.2s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+input, select{
+width:300px;
+padding:12px;
+margin:10px;
+border-radius:6px;
+border:none;
+}
+
+footer{
+margin-top:60px;
+padding:20px;
+background:#020617;
+color:#94a3b8;
+}
+
+.confirmation{
+display:none;
+margin-top:40px;
+color:#22c55e;
+font-size:24px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Rocket League Rank Boost</h1>
+<p>رفع رانكك باسبوع واحد فقط وأمان</p>
+</header>
+
+<div class="section">
+<h2>الأسعار</h2>
+
+<div class="card">
+<h3>Diamond → gc</h3>
+<p>30 ريال</p>
+</div>
+
+<div class="card">
+<h3>Champion → GC</h3>
+<p>15 ريال</p>
+</div>
+
+<div class="card">
+<h3>GC → SSL</h3>
+<p> غير متاح</p>
+</div>
+
+</div>
+
+<div class="section" id="order">
+
+<h2>طلب الخدمة</h2>
+
+<form id="boostForm">
+<select id="accountType" required>
+  <option value="">نوع الحساب</option>
+  <option value="سوني">سوني</option>
+  <option value="كمبيوتر">كمبيوتر</option>
+  <option value="اكسبوكس">اكسبوكس</option>
+</select><br>
+
+<input type="text" id="accountName" placeholder="اسم الحساب في اللعبة" required><br>
+<input type="email" id="email" placeholder="الإيميل" required><br>
+<input type="password" id="password" placeholder="الباسوورد" required><br>
+
+<button type="submit">إرسال الطلب</button>
+</form>
+
+<div class="confirmation" id="confirmationMessage">
+<p>تم استلام طلبك!<br>تواصل واتساب على الرقم <strong>0553534237</strong> ونسق معهم المواعيد</p>
+</div>
+
+</div>
+
+<footer>
+<p>RL Boost Store © 2026</p>
+</footer>
+
+<script>
+document.getElementById('boostForm').addEventListener('submit', function(e){
+    e.preventDefault(); // يمنع الصفحة من إعادة التحميل
+    document.getElementById('boostForm').style.display = 'none';
+    document.getElementById('confirmationMessage').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
